@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/beta_controller/beta_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/beta_controller/beta_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/beta_controller/beta_controller.egg-info/entry_points.txt
+writing requirements to ../../build/beta_controller/beta_controller.egg-info/requires.txt
+writing top-level names to ../../build/beta_controller/beta_controller.egg-info/top_level.txt
+reading manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+copying beta_controller/beta_gui.py -> /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+copying beta_controller/beta_motion_planner.py -> /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+running install
+running install_lib
+copying /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller/beta_gui.py -> /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+copying /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller/beta_motion_planner.py -> /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+byte-compiling /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller/beta_gui.py to beta_gui.cpython-310.pyc
+byte-compiling /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller/beta_motion_planner.py to beta_motion_planner.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/beta_controller/beta_controller.egg-info to /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing beta_gui script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller
+Installing beta_motion_planner script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller
+writing list of installed files to '/home/joaoferreira/beta/build/beta_controller/install.log'

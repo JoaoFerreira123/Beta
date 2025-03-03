@@ -1,0 +1,4 @@
+[console_scripts]
+beta_gui = beta_controller.beta_gui:main
+beta_motion_planner = beta_controller.beta_motion_planner:main
+

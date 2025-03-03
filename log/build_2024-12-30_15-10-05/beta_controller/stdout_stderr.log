@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/beta_controller/beta_controller.egg-info
+writing ../../build/beta_controller/beta_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/beta_controller/beta_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/beta_controller/beta_controller.egg-info/entry_points.txt
+writing requirements to ../../build/beta_controller/beta_controller.egg-info/requires.txt
+writing top-level names to ../../build/beta_controller/beta_controller.egg-info/top_level.txt
+writing manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+reading manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/joaoferreira/beta/build/beta_controller/build
+creating /home/joaoferreira/beta/build/beta_controller/build/lib
+creating /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+copying beta_controller/beta_gui.py -> /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+copying beta_controller/__init__.py -> /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+running install
+running install_lib
+creating /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+copying /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller/beta_gui.py -> /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+copying /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller/__init__.py -> /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+byte-compiling /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller/beta_gui.py to beta_gui.cpython-310.pyc
+byte-compiling /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/joaoferreira/beta/install/beta_controller/share/ament_index
+creating /home/joaoferreira/beta/install/beta_controller/share/ament_index/resource_index
+creating /home/joaoferreira/beta/install/beta_controller/share/ament_index/resource_index/packages
+copying resource/beta_controller -> /home/joaoferreira/beta/install/beta_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/joaoferreira/beta/install/beta_controller/share/beta_controller
+running install_egg_info
+Copying ../../build/beta_controller/beta_controller.egg-info to /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing beta_gui script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller
+writing list of installed files to '/home/joaoferreira/beta/build/beta_controller/install.log'

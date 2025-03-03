@@ -1,0 +1,210 @@
+[0.312s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_setup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joaoferreira/microros_ws/src/micro_ros_setup -DCMAKE_INSTALL_PREFIX=/home/joaoferreira/microros_ws/install/micro_ros_setup
+[3.615s] -- The C compiler identification is GNU 11.4.0
+[4.835s] -- The CXX compiler identification is GNU 11.4.0
+[4.900s] -- Detecting C compiler ABI info
+[5.366s] -- Detecting C compiler ABI info - done
+[5.421s] -- Check for working C compiler: /usr/bin/cc - skipped
+[5.437s] -- Detecting C compile features
+[5.450s] -- Detecting C compile features - done
+[5.472s] -- Detecting CXX compiler ABI info
+[5.941s] -- Detecting CXX compiler ABI info - done
+[5.957s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.957s] -- Detecting CXX compile features
+[5.958s] -- Detecting CXX compile features - done
+[6.207s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.114s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[7.854s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[8.683s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.132s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.152s] -- Added test 'lint_cmake' to check CMake code style
+[9.167s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.223s] -- Added test 'xmllint' to check XML markup files
+[9.229s] -- Configuring done
+[9.240s] -- Generating done
+[9.246s] -- Build files have been written to: /home/joaoferreira/microros_ws/build/micro_ros_setup
+[9.265s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_setup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/joaoferreira/microros_ws/src/micro_ros_setup -DCMAKE_INSTALL_PREFIX=/home/joaoferreira/microros_ws/install/micro_ros_setup
+[9.266s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_setup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joaoferreira/microros_ws/build/micro_ros_setup -- -j4 -l4
+[9.394s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_setup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/joaoferreira/microros_ws/build/micro_ros_setup -- -j4 -l4
+[9.439s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_setup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joaoferreira/microros_ws/build/micro_ros_setup
+[9.463s] -- Install configuration: ""
+[9.463s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/package_run_dependencies/micro_ros_setup
+[9.464s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/parent_prefix_path/micro_ros_setup
+[9.465s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.sh
+[9.466s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.dsv
+[9.466s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.sh
+[9.467s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/environment/path.dsv
+[9.467s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.bash
+[9.468s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.sh
+[9.469s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.zsh
+[9.472s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/local_setup.dsv
+[9.472s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.dsv
+[9.472s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/ament_index/resource_index/packages/micro_ros_setup
+[9.472s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig.cmake
+[9.472s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig-version.cmake
+[9.473s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/share/micro_ros_setup/package.xml
+[9.473s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config
+[9.475s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed
+[9.477s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/dev_uros_packages.repos
+[9.494s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/dev_ros2_packages.txt
+[9.494s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic
+[9.495s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/supported_platforms
+[9.495s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/flash.sh
+[9.495s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/client_uros_packages.repos
+[9.495s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/build.sh
+[9.496s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/board.repos
+[9.496s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/package.xml
+[9.500s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/generic/create.sh
+[9.503s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/mbed/list_apps.sh
+[9.504s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/agent_ros2_packages.txt
+[9.510s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/utils.sh
+[9.510s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/client_ros2_packages.txt
+[9.511s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/agent_uros_packages.repos
+[9.511s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host
+[9.511s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/dev_uros_packages.repos
+[9.515s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/dev_ros2_packages.txt
+[9.518s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic
+[9.519s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/client_host_packages.repos
+[9.519s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/flash.sh
+[9.520s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/build.sh
+[9.520s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/client-host-colcon.meta
+[9.521s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/package.xml
+[9.522s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/generic/create.sh
+[9.523s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/host/client_ros2_packages.txt
+[9.523s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos
+[9.523s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg
+[9.524s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/configure.sh
+[9.525s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/flash.sh
+[9.525s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client-colcon.meta
+[9.526s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client_uros_packages.repos
+[9.526s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/build.sh
+[9.526s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/board.repos
+[9.529s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/package.xml
+[9.531s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f746zg/create.sh
+[9.537s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/dev_uros_packages.repos
+[9.539s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi
+[9.540s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/configure.sh
+[9.540s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/flash.sh
+[9.541s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client-colcon.meta
+[9.541s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client_uros_packages.repos
+[9.541s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/build.sh
+[9.543s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/board.repos
+[9.545s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/package.xml
+[9.547s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f767zi/create.sh
+[9.548s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/dev_ros2_packages.txt
+[9.548s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21
+[9.549s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/configure.sh
+[9.550s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/flash.sh
+[9.550s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client-colcon.meta
+[9.552s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/client_uros_packages.repos
+[9.552s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/build.sh
+[9.552s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/board.repos
+[9.553s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/package.xml
+[9.554s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/crazyflie21/create.sh
+[9.554s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re
+[9.555s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/configure.sh
+[9.555s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/flash.sh
+[9.556s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client-colcon.meta
+[9.558s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/client_uros_packages.repos
+[9.559s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/build.sh
+[9.559s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/board.repos
+[9.560s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/package.xml
+[9.560s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446re/create.sh
+[9.561s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/list_apps.sh
+[9.562s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze
+[9.562s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/configure.sh
+[9.563s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/flash.sh
+[9.564s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client-colcon.meta
+[9.564s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client_uros_packages.repos
+[9.565s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/build.sh
+[9.565s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/board.repos
+[9.568s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/package.xml
+[9.568s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/nucleo_f446ze/create.sh
+[9.570s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407
+[9.570s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/configure.sh
+[9.573s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/flash.sh
+[9.574s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client-colcon.meta
+[9.575s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client_uros_packages.repos
+[9.575s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/build.sh
+[9.575s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/board.repos
+[9.575s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/package.xml
+[9.575s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/create.sh
+[9.576s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32
+[9.576s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/configure.sh
+[9.576s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/flash.sh
+[9.577s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client-colcon.meta
+[9.577s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/client_uros_packages.repos
+[9.577s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/build.sh
+[9.577s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/board.repos
+[9.578s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/package.xml
+[9.579s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/create.sh
+[9.580s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/freertos/esp32/README.md
+[9.581s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian
+[9.582s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/dev_uros_packages.repos
+[9.582s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/dev_ros2_packages.txt
+[9.584s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic
+[9.585s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/configure.sh
+[9.587s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/supported_platforms
+[9.587s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/flash.sh
+[9.588s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client-colcon.meta
+[9.588s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/client_uros_packages.repos
+[9.589s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/build.sh
+[9.590s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/raspbian/generic/create.sh
+[9.590s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib
+[9.591s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_uros_packages.repos
+[9.593s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/dev_ros2_packages.txt
+[9.594s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic
+[9.594s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/flash.sh
+[9.594s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client-colcon.meta
+[9.594s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/client_uros_packages.repos
+[9.595s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/build.sh
+[9.600s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/package.xml
+[9.600s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/create.sh
+[9.600s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/generate_lib/generic/demo_toolchain.cmake
+[9.600s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra
+[9.601s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_uros_packages.repos
+[9.601s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/dev_ros2_packages.txt
+[9.601s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5
+[9.602s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/configure.sh
+[9.602s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/flash.sh
+[9.602s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client-colcon.meta
+[9.603s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/client_uros_packages.repos
+[9.607s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/build.sh
+[9.609s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/board.repos
+[9.609s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/ra6m5/create.sh
+[9.609s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/renesas_ra/list_apps.sh
+[9.610s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android
+[9.611s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/dev_uros_packages.repos
+[9.611s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/dev_ros2_packages.txt
+[9.612s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic
+[9.612s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/flash.sh
+[9.615s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/client-colcon.meta
+[9.616s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/client_uros_packages.repos
+[9.616s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/build.sh
+[9.617s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/package.xml
+[9.620s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/android/generic/create.sh
+[9.623s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr
+[9.623s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/dev_uros_packages.repos
+[9.623s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/dev_ros2_packages.txt
+[9.624s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic
+[9.624s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/configure.sh
+[9.624s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/supported_platforms
+[9.624s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/flash.sh
+[9.624s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client-colcon.meta
+[9.625s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/client_uros_packages.repos
+[9.626s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/build.sh
+[9.626s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/board.repos
+[9.627s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/package.xml
+[9.627s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/generic/create.sh
+[9.627s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/zephyr/list_apps.sh
+[9.628s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/./config/client_uros_packages.repos
+[9.628s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_ws.sh
+[9.628s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_agent_ws.sh
+[9.628s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/create_firmware_ws.sh
+[9.629s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/configure_firmware.sh
+[9.631s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/flash_firmware.sh
+[9.631s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_firmware.sh
+[9.631s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/build_agent.sh
+[9.632s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/yaml_filter.py
+[9.632s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/clean_env.sh
+[9.632s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_setup/lib/micro_ros_setup/component
+[9.653s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_setup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/joaoferreira/microros_ws/build/micro_ros_setup

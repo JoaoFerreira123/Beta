@@ -1,0 +1,32 @@
+[0.105s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/home/joaoferreira/microros_ws/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:/home/joaoferreira/microros_ws/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/joaoferreira/microros_ws/build/micro_ros_agent -- -j4 -l4
+[0.551s] [ 16%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/main.cpp.o[0m
+[0.584s] [ 33%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/Agent.cpp.o[0m
+[0.603s] [ 50%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_manager.cpp.o[0m
+[1.627s] [ 66%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/graph_manager/graph_typesupport.cpp.o[0m
+[77.358s] [ 83%] [32mBuilding CXX object CMakeFiles/micro_ros_agent.dir/src/agent/utils/demangle.cpp.o[0m
+[80.154s] [100%] [32m[1mLinking CXX executable micro_ros_agent[0m
+[82.478s] [100%] Built target micro_ros_agent
+[82.702s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/home/joaoferreira/microros_ws/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:/home/joaoferreira/microros_ws/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/joaoferreira/microros_ws/build/micro_ros_agent -- -j4 -l4
+[82.824s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/home/joaoferreira/microros_ws/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:/home/joaoferreira/microros_ws/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/joaoferreira/microros_ws/build/micro_ros_agent
+[82.876s] -- Install configuration: ""
+[82.910s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent
+[82.924s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent
+[82.957s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh
+[82.958s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv
+[82.958s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh
+[82.959s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv
+[82.959s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash
+[82.959s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh
+[82.960s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh
+[82.960s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv
+[82.960s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv
+[82.971s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent
+[82.972s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake
+[82.972s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake
+[82.973s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake
+[82.973s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/package.xml
+[82.994s] -- Installing: /home/joaoferreira/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent
+[82.999s] -- Set runtime path of "/home/joaoferreira/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent" to ""
+[83.000s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch
+[83.000s] -- Up-to-date: /home/joaoferreira/microros_ws/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py
+[83.014s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/home/joaoferreira/microros_ws/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:/home/joaoferreira/microros_ws/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/joaoferreira/microros_ws/build/micro_ros_agent

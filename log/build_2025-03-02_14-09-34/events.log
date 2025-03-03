@@ -1,0 +1,722 @@
+[0.000000] (-) TimerEvent: {}
+[0.000228] (beta_controller) JobQueued: {'identifier': 'beta_controller', 'dependencies': OrderedDict()}
+[0.000279] (micro_ros_msgs) JobQueued: {'identifier': 'micro_ros_msgs', 'dependencies': OrderedDict()}
+[0.000323] (micro_ros_setup) JobQueued: {'identifier': 'micro_ros_setup', 'dependencies': OrderedDict()}
+[0.000363] (micro_ros_agent) JobQueued: {'identifier': 'micro_ros_agent', 'dependencies': OrderedDict([('micro_ros_msgs', '/home/joaoferreira/beta/install/micro_ros_msgs')])}
+[0.000427] (micro_ros_msgs) JobStarted: {'identifier': 'micro_ros_msgs'}
+[0.098485] (-) TimerEvent: {}
+[0.207177] (-) TimerEvent: {}
+[0.208044] (beta_controller) JobStarted: {'identifier': 'beta_controller'}
+[0.307350] (-) TimerEvent: {}
+[0.345117] (micro_ros_setup) JobStarted: {'identifier': 'micro_ros_setup'}
+[0.407485] (-) TimerEvent: {}
+[0.419798] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'cmake'}
+[0.490827] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/joaoferreira/beta/beta_firmware/microros_ws/src/uros/micro_ros_msgs', '-DCMAKE_INSTALL_PREFIX=/home/joaoferreira/beta/install/micro_ros_msgs'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[0.507675] (-) TimerEvent: {}
+[0.608231] (-) TimerEvent: {}
+[0.708775] (-) TimerEvent: {}
+[0.809392] (-) TimerEvent: {}
+[0.909930] (-) TimerEvent: {}
+[1.010479] (-) TimerEvent: {}
+[1.110978] (-) TimerEvent: {}
+[1.211492] (-) TimerEvent: {}
+[1.312006] (-) TimerEvent: {}
+[1.412551] (-) TimerEvent: {}
+[1.513096] (-) TimerEvent: {}
+[1.613644] (-) TimerEvent: {}
+[1.714016] (-) TimerEvent: {}
+[1.814527] (-) TimerEvent: {}
+[1.915024] (-) TimerEvent: {}
+[2.015544] (-) TimerEvent: {}
+[2.116097] (-) TimerEvent: {}
+[2.216711] (-) TimerEvent: {}
+[2.317160] (-) TimerEvent: {}
+[2.417875] (-) TimerEvent: {}
+[2.518561] (-) TimerEvent: {}
+[2.619120] (-) TimerEvent: {}
+[2.719683] (-) TimerEvent: {}
+[2.820109] (-) TimerEvent: {}
+[2.920643] (-) TimerEvent: {}
+[3.021065] (-) TimerEvent: {}
+[3.121649] (-) TimerEvent: {}
+[3.222189] (-) TimerEvent: {}
+[3.322704] (-) TimerEvent: {}
+[3.423127] (-) TimerEvent: {}
+[3.523734] (-) TimerEvent: {}
+[3.624244] (-) TimerEvent: {}
+[3.724662] (-) TimerEvent: {}
+[3.824991] (-) TimerEvent: {}
+[3.925365] (-) TimerEvent: {}
+[4.029529] (-) TimerEvent: {}
+[4.130167] (-) TimerEvent: {}
+[4.230735] (-) TimerEvent: {}
+[4.331104] (-) TimerEvent: {}
+[4.434852] (-) TimerEvent: {}
+[4.535334] (-) TimerEvent: {}
+[4.635706] (-) TimerEvent: {}
+[4.736076] (-) TimerEvent: {}
+[4.836505] (-) TimerEvent: {}
+[4.937066] (-) TimerEvent: {}
+[5.037584] (-) TimerEvent: {}
+[5.137939] (-) TimerEvent: {}
+[5.238291] (-) TimerEvent: {}
+[5.338707] (-) TimerEvent: {}
+[5.439389] (-) TimerEvent: {}
+[5.539948] (-) TimerEvent: {}
+[5.640450] (-) TimerEvent: {}
+[5.740844] (-) TimerEvent: {}
+[5.841320] (-) TimerEvent: {}
+[5.941789] (-) TimerEvent: {}
+[6.042296] (-) TimerEvent: {}
+[6.142867] (-) TimerEvent: {}
+[6.243455] (-) TimerEvent: {}
+[6.343977] (-) TimerEvent: {}
+[6.444547] (-) TimerEvent: {}
+[6.544993] (-) TimerEvent: {}
+[6.645477] (-) TimerEvent: {}
+[6.745842] (-) TimerEvent: {}
+[6.846238] (-) TimerEvent: {}
+[6.946660] (-) TimerEvent: {}
+[7.047089] (-) TimerEvent: {}
+[7.147752] (-) TimerEvent: {}
+[7.248285] (-) TimerEvent: {}
+[7.348823] (-) TimerEvent: {}
+[7.354019] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[7.354313] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[7.354487] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.354643] (micro_ros_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[7.357145] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'cmake'}
+[7.370863] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'build'}
+[7.372590] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joaoferreira/beta/build/micro_ros_setup', '--', '-j4', '-l4'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_setup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[7.565821] (-) TimerEvent: {}
+[7.666259] (-) TimerEvent: {}
+[7.766634] (-) TimerEvent: {}
+[7.867007] (-) TimerEvent: {}
+[7.967388] (-) TimerEvent: {}
+[8.067968] (-) TimerEvent: {}
+[8.168540] (-) TimerEvent: {}
+[8.269134] (-) TimerEvent: {}
+[8.369715] (-) TimerEvent: {}
+[8.470141] (-) TimerEvent: {}
+[8.570543] (-) TimerEvent: {}
+[8.671494] (-) TimerEvent: {}
+[8.771903] (-) TimerEvent: {}
+[8.872334] (-) TimerEvent: {}
+[8.972929] (-) TimerEvent: {}
+[9.073475] (-) TimerEvent: {}
+[9.173935] (-) TimerEvent: {}
+[9.190346] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.274159] (-) TimerEvent: {}
+[9.374655] (-) TimerEvent: {}
+[9.477518] (-) TimerEvent: {}
+[9.578761] (-) TimerEvent: {}
+[9.682008] (-) TimerEvent: {}
+[9.687918] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[9.702065] (micro_ros_setup) JobProgress: {'identifier': 'micro_ros_setup', 'progress': 'install'}
+[9.730627] (micro_ros_setup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joaoferreira/beta/build/micro_ros_setup'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_setup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_setup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[9.761074] (micro_ros_setup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.765995] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/ament_index/resource_index/package_run_dependencies/micro_ros_setup\n'}
+[9.783753] (-) TimerEvent: {}
+[9.807435] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/ament_index/resource_index/parent_prefix_path/micro_ros_setup\n'}
+[9.840835] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.sh\n'}
+[9.841122] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/environment/ament_prefix_path.dsv\n'}
+[9.841246] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/environment/path.sh\n'}
+[9.841367] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/environment/path.dsv\n'}
+[9.841515] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/local_setup.bash\n'}
+[9.841640] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/local_setup.sh\n'}
+[9.841757] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/local_setup.zsh\n'}
+[9.841999] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/local_setup.dsv\n'}
+[9.842129] (micro_ros_setup) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/package.dsv\n'}
+[9.883892] (-) TimerEvent: {}
+[9.984327] (-) TimerEvent: {}
+[10.084875] (-) TimerEvent: {}
+[10.159951] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/ament_index/resource_index/packages/micro_ros_setup\n'}
+[10.170694] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig.cmake\n'}
+[10.171115] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/cmake/micro_ros_setupConfig-version.cmake\n'}
+[10.171372] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/share/micro_ros_setup/package.xml\n'}
+[10.171692] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config\n'}
+[10.185019] (-) TimerEvent: {}
+[10.285616] (-) TimerEvent: {}
+[10.371992] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed\n'}
+[10.377993] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/dev_uros_packages.repos\n'}
+[10.378459] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/dev_ros2_packages.txt\n'}
+[10.378839] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic\n'}
+[10.385789] (-) TimerEvent: {}
+[10.486386] (-) TimerEvent: {}
+[10.587032] (-) TimerEvent: {}
+[10.619789] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/supported_platforms\n'}
+[10.620268] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/flash.sh\n'}
+[10.620776] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/client_uros_packages.repos\n'}
+[10.621070] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/build.sh\n'}
+[10.621334] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/board.repos\n'}
+[10.621665] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/package.xml\n'}
+[10.621935] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/generic/create.sh\n'}
+[10.622206] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/mbed/list_apps.sh\n'}
+[10.622781] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/agent_ros2_packages.txt\n'}
+[10.623125] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/utils.sh\n'}
+[10.623469] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/client_ros2_packages.txt\n'}
+[10.623798] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/agent_uros_packages.repos\n'}
+[10.624078] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host\n'}
+[10.636958] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/dev_uros_packages.repos\n'}
+[10.637483] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/dev_ros2_packages.txt\n'}
+[10.637839] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic\n'}
+[10.647306] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/client_host_packages.repos\n'}
+[10.647796] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/flash.sh\n'}
+[10.648169] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/build.sh\n'}
+[10.648390] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/client-host-colcon.meta\n'}
+[10.648801] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/package.xml\n'}
+[10.649069] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/generic/create.sh\n'}
+[10.649267] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/host/client_ros2_packages.txt\n'}
+[10.649506] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos\n'}
+[10.662361] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg\n'}
+[10.687194] (-) TimerEvent: {}
+[10.688354] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/configure.sh\n'}
+[10.688787] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/flash.sh\n'}
+[10.689168] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client-colcon.meta\n'}
+[10.689428] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/client_uros_packages.repos\n'}
+[10.689747] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/build.sh\n'}
+[10.689926] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/board.repos\n'}
+[10.690307] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/package.xml\n'}
+[10.690511] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f746zg/create.sh\n'}
+[10.690677] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/dev_uros_packages.repos\n'}
+[10.690865] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi\n'}
+[10.698995] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/configure.sh\n'}
+[10.699622] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/flash.sh\n'}
+[10.699827] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client-colcon.meta\n'}
+[10.699996] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/client_uros_packages.repos\n'}
+[10.700156] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/build.sh\n'}
+[10.700316] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/board.repos\n'}
+[10.700748] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/package.xml\n'}
+[10.700931] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f767zi/create.sh\n'}
+[10.701081] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/dev_ros2_packages.txt\n'}
+[10.701233] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21\n'}
+[10.729827] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/configure.sh\n'}
+[10.730265] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/flash.sh\n'}
+[10.730499] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/client-colcon.meta\n'}
+[10.730720] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/client_uros_packages.repos\n'}
+[10.730938] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/build.sh\n'}
+[10.731109] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/board.repos\n'}
+[10.731277] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/package.xml\n'}
+[10.731471] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/crazyflie21/create.sh\n'}
+[10.731653] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re\n'}
+[10.734337] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/configure.sh\n'}
+[10.734945] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/flash.sh\n'}
+[10.735369] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/client-colcon.meta\n'}
+[10.735761] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/client_uros_packages.repos\n'}
+[10.736047] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/build.sh\n'}
+[10.736308] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/board.repos\n'}
+[10.736616] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/package.xml\n'}
+[10.736820] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446re/create.sh\n'}
+[10.736985] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/list_apps.sh\n'}
+[10.737160] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze\n'}
+[10.753676] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/configure.sh\n'}
+[10.754130] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/flash.sh\n'}
+[10.754867] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client-colcon.meta\n'}
+[10.755164] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/client_uros_packages.repos\n'}
+[10.755460] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/build.sh\n'}
+[10.755962] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/board.repos\n'}
+[10.756243] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/package.xml\n'}
+[10.756681] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/nucleo_f446ze/create.sh\n'}
+[10.756964] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407\n'}
+[10.757235] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/configure.sh\n'}
+[10.757569] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/flash.sh\n'}
+[10.757870] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client-colcon.meta\n'}
+[10.758187] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/client_uros_packages.repos\n'}
+[10.758481] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/build.sh\n'}
+[10.758792] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/board.repos\n'}
+[10.759067] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/package.xml\n'}
+[10.759337] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/olimex-stm32-e407/create.sh\n'}
+[10.759733] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32\n'}
+[10.765018] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/configure.sh\n'}
+[10.765525] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/flash.sh\n'}
+[10.765802] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/client-colcon.meta\n'}
+[10.766370] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/client_uros_packages.repos\n'}
+[10.766675] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/build.sh\n'}
+[10.767023] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/board.repos\n'}
+[10.767361] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/package.xml\n'}
+[10.767569] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/create.sh\n'}
+[10.767731] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/freertos/esp32/README.md\n'}
+[10.767884] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian\n'}
+[10.768038] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/dev_uros_packages.repos\n'}
+[10.768180] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/dev_ros2_packages.txt\n'}
+[10.768332] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic\n'}
+[10.782369] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/configure.sh\n'}
+[10.782821] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/supported_platforms\n'}
+[10.783037] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/flash.sh\n'}
+[10.783246] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/client-colcon.meta\n'}
+[10.783523] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/client_uros_packages.repos\n'}
+[10.783680] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/build.sh\n'}
+[10.783815] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/raspbian/generic/create.sh\n'}
+[10.783979] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib\n'}
+[10.787267] (-) TimerEvent: {}
+[10.862319] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/dev_uros_packages.repos\n'}
+[10.862776] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/dev_ros2_packages.txt\n'}
+[10.863077] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic\n'}
+[10.863594] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/flash.sh\n'}
+[10.863875] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/client-colcon.meta\n'}
+[10.864077] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/client_uros_packages.repos\n'}
+[10.864264] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/build.sh\n'}
+[10.864468] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/package.xml\n'}
+[10.864664] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/create.sh\n'}
+[10.864836] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/generate_lib/generic/demo_toolchain.cmake\n'}
+[10.865005] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra\n'}
+[10.869954] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/dev_uros_packages.repos\n'}
+[10.870288] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/dev_ros2_packages.txt\n'}
+[10.870674] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5\n'}
+[10.883613] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/configure.sh\n'}
+[10.884025] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/flash.sh\n'}
+[10.884263] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/client-colcon.meta\n'}
+[10.884375] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/client_uros_packages.repos\n'}
+[10.884516] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/build.sh\n'}
+[10.884750] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/board.repos\n'}
+[10.884973] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/ra6m5/create.sh\n'}
+[10.885185] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/renesas_ra/list_apps.sh\n'}
+[10.885368] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android\n'}
+[10.887397] (-) TimerEvent: {}
+[10.923105] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/dev_uros_packages.repos\n'}
+[10.923660] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/dev_ros2_packages.txt\n'}
+[10.923872] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic\n'}
+[10.937659] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/flash.sh\n'}
+[10.938054] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/client-colcon.meta\n'}
+[10.938301] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/client_uros_packages.repos\n'}
+[10.938661] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/build.sh\n'}
+[10.938908] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/package.xml\n'}
+[10.939141] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/android/generic/create.sh\n'}
+[10.939391] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr\n'}
+[10.946454] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/dev_uros_packages.repos\n'}
+[10.946930] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[10.947174] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/dev_ros2_packages.txt\n'}
+[10.947350] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic\n'}
+[10.957182] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/configure.sh\n'}
+[10.957676] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/supported_platforms\n'}
+[10.957943] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/flash.sh\n'}
+[10.958167] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/client-colcon.meta\n'}
+[10.958429] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/client_uros_packages.repos\n'}
+[10.958737] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/build.sh\n'}
+[10.959004] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/board.repos\n'}
+[10.959269] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/package.xml\n'}
+[10.959599] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/generic/create.sh\n'}
+[10.959919] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/zephyr/list_apps.sh\n'}
+[10.960127] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/./config/client_uros_packages.repos\n'}
+[10.987553] (-) TimerEvent: {}
+[10.989335] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/create_ws.sh\n'}
+[10.989739] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/create_agent_ws.sh\n'}
+[10.989991] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/create_firmware_ws.sh\n'}
+[10.990221] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/configure_firmware.sh\n'}
+[10.990472] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/flash_firmware.sh\n'}
+[10.990782] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/build_firmware.sh\n'}
+[10.991018] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/build_agent.sh\n'}
+[10.991301] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/yaml_filter.py\n'}
+[10.991744] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/clean_env.sh\n'}
+[10.992001] (micro_ros_setup) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_setup/lib/micro_ros_setup/component\n'}
+[10.993565] (micro_ros_setup) CommandEnded: {'returncode': 0}
+[11.087689] (-) TimerEvent: {}
+[11.188148] (-) TimerEvent: {}
+[11.288681] (-) TimerEvent: {}
+[11.389026] (-) TimerEvent: {}
+[11.489396] (-) TimerEvent: {}
+[11.589798] (-) TimerEvent: {}
+[11.690334] (-) TimerEvent: {}
+[11.729024] (micro_ros_setup) JobEnded: {'identifier': 'micro_ros_setup', 'rc': 0}
+[11.790486] (-) TimerEvent: {}
+[11.907095] (-) TimerEvent: {}
+[12.007594] (-) TimerEvent: {}
+[12.108120] (-) TimerEvent: {}
+[12.208536] (-) TimerEvent: {}
+[12.308960] (-) TimerEvent: {}
+[12.409399] (-) TimerEvent: {}
+[12.509929] (-) TimerEvent: {}
+[12.610261] (-) TimerEvent: {}
+[12.710633] (-) TimerEvent: {}
+[12.811019] (-) TimerEvent: {}
+[12.911605] (-) TimerEvent: {}
+[13.011993] (-) TimerEvent: {}
+[13.112481] (-) TimerEvent: {}
+[13.212829] (-) TimerEvent: {}
+[13.313255] (-) TimerEvent: {}
+[13.388920] (micro_ros_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[13.413425] (-) TimerEvent: {}
+[13.513812] (-) TimerEvent: {}
+[13.614125] (-) TimerEvent: {}
+[13.714506] (-) TimerEvent: {}
+[13.814883] (-) TimerEvent: {}
+[13.908144] (beta_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/beta_controller', 'build', '--build-base', '/home/joaoferreira/beta/build/beta_controller/build', 'install', '--record', '/home/joaoferreira/beta/build/beta_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/joaoferreira/beta/src/beta_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'pt_BR:en', 'USER': 'joaoferreira', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/joaoferreira', 'OLDPWD': '/home/joaoferreira', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_US.UTF-8', 'SYSTEMD_EXEC_PID': '1267', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/joaoferreira/beta/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'joaoferreira', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'joaoferreira', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin', 'SESSION_MANAGER': 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CWXZ22', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.235', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/joaoferreira/beta/build/beta_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/joaoferreira/beta/build/beta_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs'}, 'shell': False}
+[13.915004] (-) TimerEvent: {}
+[13.986529] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[14.015125] (-) TimerEvent: {}
+[14.115494] (-) TimerEvent: {}
+[14.215898] (-) TimerEvent: {}
+[14.304230] (beta_controller) StdoutLine: {'line': b'running egg_info\n'}
+[14.305688] (beta_controller) StdoutLine: {'line': b'writing ../../build/beta_controller/beta_controller.egg-info/PKG-INFO\n'}
+[14.316021] (-) TimerEvent: {}
+[14.336244] (beta_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/beta_controller/beta_controller.egg-info/dependency_links.txt\n'}
+[14.337522] (beta_controller) StdoutLine: {'line': b'writing entry points to ../../build/beta_controller/beta_controller.egg-info/entry_points.txt\n'}
+[14.337987] (beta_controller) StdoutLine: {'line': b'writing requirements to ../../build/beta_controller/beta_controller.egg-info/requires.txt\n'}
+[14.338184] (beta_controller) StdoutLine: {'line': b'writing top-level names to ../../build/beta_controller/beta_controller.egg-info/top_level.txt\n'}
+[14.355306] (beta_controller) StdoutLine: {'line': b"reading manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'\n"}
+[14.416239] (-) TimerEvent: {}
+[14.429679] (beta_controller) StdoutLine: {'line': b"writing manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'\n"}
+[14.429951] (beta_controller) StdoutLine: {'line': b'running build\n'}
+[14.430070] (beta_controller) StdoutLine: {'line': b'running build_py\n'}
+[14.431605] (beta_controller) StdoutLine: {'line': b'running install\n'}
+[14.432268] (beta_controller) StdoutLine: {'line': b'running install_lib\n'}
+[14.436084] (beta_controller) StdoutLine: {'line': b'running install_data\n'}
+[14.436374] (beta_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.439819] (beta_controller) StdoutLine: {'line': b"removing '/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[14.441191] (beta_controller) StdoutLine: {'line': b'Copying ../../build/beta_controller/beta_controller.egg-info to /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info\n'}
+[14.499264] (beta_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[14.516365] (-) TimerEvent: {}
+[14.520598] (micro_ros_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[14.530594] (beta_controller) StdoutLine: {'line': b'Installing beta_gui script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller\n'}
+[14.547478] (beta_controller) StdoutLine: {'line': b'Installing beta_motion_planner script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller\n'}
+[14.548145] (beta_controller) StdoutLine: {'line': b"writing list of installed files to '/home/joaoferreira/beta/build/beta_controller/install.log'\n"}
+[14.590210] (beta_controller) CommandEnded: {'returncode': 0}
+[14.616650] (-) TimerEvent: {}
+[14.716271] (micro_ros_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[14.716938] (-) TimerEvent: {}
+[14.720524] (beta_controller) JobEnded: {'identifier': 'beta_controller', 'rc': 0}
+[14.817138] (-) TimerEvent: {}
+[14.917696] (-) TimerEvent: {}
+[15.018188] (-) TimerEvent: {}
+[15.063727] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[15.064106] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[15.064347] (micro_ros_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[15.118344] (-) TimerEvent: {}
+[15.218895] (-) TimerEvent: {}
+[15.306692] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[15.319075] (-) TimerEvent: {}
+[15.419675] (-) TimerEvent: {}
+[15.520168] (-) TimerEvent: {}
+[15.620663] (-) TimerEvent: {}
+[15.622917] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[15.639160] (micro_ros_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[15.720804] (-) TimerEvent: {}
+[15.783315] (micro_ros_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[15.820931] (-) TimerEvent: {}
+[15.921294] (-) TimerEvent: {}
+[16.021709] (-) TimerEvent: {}
+[16.122043] (-) TimerEvent: {}
+[16.222392] (-) TimerEvent: {}
+[16.322752] (-) TimerEvent: {}
+[16.423182] (-) TimerEvent: {}
+[16.492856] (micro_ros_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[16.510861] (micro_ros_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/joaoferreira/beta/build/micro_ros_msgs\n'}
+[16.518477] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[16.519518] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'build'}
+[16.520071] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joaoferreira/beta/build/micro_ros_msgs', '--', '-j4', '-l4'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[16.523279] (-) TimerEvent: {}
+[16.610544] (micro_ros_msgs) StdoutLine: {'line': b'[  2%] Built target micro_ros_msgs__cpp\n'}
+[16.612906] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_generator_c\x1b[0m\n'}
+[16.623435] (-) TimerEvent: {}
+[16.685706] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[16.712238] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[16.723584] (-) TimerEvent: {}
+[16.823956] (-) TimerEvent: {}
+[16.924325] (-) TimerEvent: {}
+[16.997824] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] Built target micro_ros_msgs__rosidl_generator_c\n'}
+[17.004960] (micro_ros_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_micro_ros_msgs\n'}
+[17.020732] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[17.024552] (-) TimerEvent: {}
+[17.037515] (micro_ros_msgs) StdoutLine: {'line': b'[ 23%] Built target micro_ros_msgs__rosidl_typesupport_cpp\n'}
+[17.078585] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[17.078825] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[17.098822] (micro_ros_msgs) StdoutLine: {'line': b'[ 34%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[17.100252] (micro_ros_msgs) StdoutLine: {'line': b'[ 44%] Built target micro_ros_msgs__rosidl_typesupport_introspection_cpp\n'}
+[17.107083] (micro_ros_msgs) StdoutLine: {'line': b'[ 55%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c\n'}
+[17.118146] (micro_ros_msgs) StdoutLine: {'line': b'[ 65%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c\n'}
+[17.123810] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[17.125956] (-) TimerEvent: {}
+[17.158142] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs__rosidl_typesupport_c\n'}
+[17.222803] (micro_ros_msgs) StdoutLine: {'line': b'[ 76%] Built target micro_ros_msgs\n'}
+[17.226147] (-) TimerEvent: {}
+[17.307360] (micro_ros_msgs) StdoutLine: {'line': b'[ 78%] Built target micro_ros_msgs__py\n'}
+[17.326703] (-) TimerEvent: {}
+[17.348350] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_generator_py\x1b[0m\n'}
+[17.426845] (-) TimerEvent: {}
+[17.527338] (-) TimerEvent: {}
+[17.562536] (micro_ros_msgs) StdoutLine: {'line': b'[ 87%] Built target micro_ros_msgs__rosidl_generator_py\n'}
+[17.602696] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[17.604761] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[17.627392] (micro_ros_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[17.627782] (-) TimerEvent: {}
+[17.651561] (micro_ros_msgs) StdoutLine: {'line': b'[ 91%] Built target micro_ros_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[17.656720] (micro_ros_msgs) StdoutLine: {'line': b'[ 95%] Built target micro_ros_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[17.679012] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target micro_ros_msgs__rosidl_typesupport_c__pyext\n'}
+[17.727949] (-) TimerEvent: {}
+[17.828436] (-) TimerEvent: {}
+[17.911998] (micro_ros_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[17.914018] (micro_ros_msgs) StdoutLine: {'line': b'writing micro_ros_msgs.egg-info/PKG-INFO\n'}
+[17.914540] (micro_ros_msgs) StdoutLine: {'line': b'writing dependency_links to micro_ros_msgs.egg-info/dependency_links.txt\n'}
+[17.915079] (micro_ros_msgs) StdoutLine: {'line': b'writing top-level names to micro_ros_msgs.egg-info/top_level.txt\n'}
+[17.920955] (micro_ros_msgs) StdoutLine: {'line': b"reading manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[17.922702] (micro_ros_msgs) StdoutLine: {'line': b"writing manifest file 'micro_ros_msgs.egg-info/SOURCES.txt'\n"}
+[17.928657] (-) TimerEvent: {}
+[17.988557] (micro_ros_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_micro_ros_msgs_egg\n'}
+[18.021359] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[18.022969] (micro_ros_msgs) JobProgress: {'identifier': 'micro_ros_msgs', 'progress': 'install'}
+[18.024021] (micro_ros_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joaoferreira/beta/build/micro_ros_msgs'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_agent/lib:/home/joaoferreira/beta/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[18.028762] (-) TimerEvent: {}
+[18.042529] (micro_ros_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.042892] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/ament_index/resource_index/rosidl_interfaces/micro_ros_msgs\n'}
+[18.043418] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.043683] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.043893] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.044161] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.h\n'}
+[18.044303] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.h\n'}
+[18.044566] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.h\n'}
+[18.044755] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.c\n'}
+[18.044902] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__functions.h\n'}
+[18.045164] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__functions.c\n'}
+[18.045286] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.h\n'}
+[18.045438] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.h\n'}
+[18.045573] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.h\n'}
+[18.045701] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__functions.c\n'}
+[18.045825] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.h\n'}
+[18.045954] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.h\n'}
+[18.046146] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.h\n'}
+[18.046289] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.h\n'}
+[18.046412] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[18.046547] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.h\n'}
+[18.046668] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.sh\n'}
+[18.046765] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/library_path.dsv\n'}
+[18.047447] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_c.so\n'}
+[18.047777] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.047989] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.048118] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.048245] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_c.h\n'}
+[18.048464] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_c.h\n'}
+[18.048598] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_c.h\n'}
+[18.048734] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[18.049052] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[18.049297] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.049610] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.049755] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.049872] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.c\n'}
+[18.050115] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.c\n'}
+[18.050251] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_c.h\n'}
+[18.050353] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_c.h\n'}
+[18.050477] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.c\n'}
+[18.050575] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_c.h\n'}
+[18.050667] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[18.075619] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_c.so\n'}
+[18.076256] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_c.so\n'}
+[18.076560] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.076817] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.077133] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/entity.hpp\n'}
+[18.077357] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.077618] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__builder.hpp\n'}
+[18.077936] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.hpp\n'}
+[18.078143] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__traits.hpp\n'}
+[18.078331] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.hpp\n'}
+[18.078627] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__struct.hpp\n'}
+[18.078791] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__builder.hpp\n'}
+[18.078948] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__struct.hpp\n'}
+[18.079102] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.hpp\n'}
+[18.079252] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__traits.hpp\n'}
+[18.079422] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__builder.hpp\n'}
+[18.079594] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__traits.hpp\n'}
+[18.079749] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__struct.hpp\n'}
+[18.079903] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/node.hpp\n'}
+[18.080058] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[18.080212] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/graph.hpp\n'}
+[18.080366] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.080555] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.080715] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.080869] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.081018] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.081201] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.081357] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/dds_fastrtps\n'}
+[18.081546] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[18.091736] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[18.092348] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs\n'}
+[18.092898] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg\n'}
+[18.093159] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail\n'}
+[18.093369] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__type_support.cpp\n'}
+[18.093644] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.093867] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/graph__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.094095] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/entity__type_support.cpp\n'}
+[18.094310] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.094563] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/include/micro_ros_msgs/micro_ros_msgs/msg/detail/node__type_support.cpp\n'}
+[18.107538] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[18.108971] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_typesupport_cpp.so\n'}
+[18.109595] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.sh\n'}
+[18.109954] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/pythonpath.dsv\n'}
+[18.110306] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info\n'}
+[18.110640] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[18.111039] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[18.111517] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/top_level.txt\n'}
+[18.111974] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs-3.0.1-py3.10.egg-info/PKG-INFO\n'}
+[18.112638] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs\n'}
+[18.113016] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[18.113367] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg\n'}
+[18.113767] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity_s.c\n'}
+[18.114019] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node.py\n'}
+[18.114253] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph.py\n'}
+[18.114670] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_node_s.c\n'}
+[18.114909] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_graph_s.c\n'}
+[18.115165] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/_entity.py\n'}
+[18.115646] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg/__init__.py\n'}
+[18.115850] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[18.116044] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.116266] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[18.116510] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.116678] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/_micro_ros_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[18.116827] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.116954] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py\n'}
+[18.128899] (-) TimerEvent: {}
+[18.229257] (-) TimerEvent: {}
+[18.313504] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs'...\n"}
+[18.313910] (micro_ros_msgs) StdoutLine: {'line': b"Compiling '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/__init__.py'...\n"}
+[18.314149] (micro_ros_msgs) StdoutLine: {'line': b"Listing '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/msg'...\n"}
+[18.329456] (-) TimerEvent: {}
+[18.336997] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.345915] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.347142] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages/micro_ros_msgs/micro_ros_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[18.348151] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/lib/libmicro_ros_msgs__rosidl_generator_py.so\n'}
+[18.348587] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.idl\n'}
+[18.348936] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.idl\n'}
+[18.349261] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.idl\n'}
+[18.349577] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Graph.msg\n'}
+[18.349838] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Node.msg\n'}
+[18.350056] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/msg/Entity.msg\n'}
+[18.350376] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/ament_index/resource_index/package_run_dependencies/micro_ros_msgs\n'}
+[18.350633] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/ament_index/resource_index/parent_prefix_path/micro_ros_msgs\n'}
+[18.350883] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.sh\n'}
+[18.351108] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/ament_prefix_path.dsv\n'}
+[18.351492] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.sh\n'}
+[18.351763] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/environment/path.dsv\n'}
+[18.352096] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.bash\n'}
+[18.352374] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.sh\n'}
+[18.352617] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.zsh\n'}
+[18.352830] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/local_setup.dsv\n'}
+[18.353126] (micro_ros_msgs) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv\n'}
+[18.356710] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/ament_index/resource_index/packages/micro_ros_msgs\n'}
+[18.358315] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport.cmake\n'}
+[18.358864] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[18.359291] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[18.359791] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[18.360179] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[18.360393] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[18.360659] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport.cmake\n'}
+[18.360880] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[18.427545] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_cppExport.cmake\n'}
+[18.427967] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[18.428217] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[18.428583] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[18.428890] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[18.429200] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[18.429474] (-) TimerEvent: {}
+[18.429755] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[18.430111] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport.cmake\n'}
+[18.430393] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/export_micro_ros_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[18.430653] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[18.430886] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[18.431257] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[18.431543] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[18.431733] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[18.431899] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[18.432064] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[18.432229] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig.cmake\n'}
+[18.432396] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake/micro_ros_msgsConfig-version.cmake\n'}
+[18.432702] (micro_ros_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/package.xml\n'}
+[18.438584] (micro_ros_msgs) CommandEnded: {'returncode': 0}
+[18.529652] (-) TimerEvent: {}
+[18.630152] (-) TimerEvent: {}
+[18.688854] (micro_ros_msgs) JobEnded: {'identifier': 'micro_ros_msgs', 'rc': 0}
+[18.691920] (micro_ros_agent) JobStarted: {'identifier': 'micro_ros_agent'}
+[18.730347] (-) TimerEvent: {}
+[18.830861] (-) TimerEvent: {}
+[18.931379] (-) TimerEvent: {}
+[18.987813] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'cmake'}
+[19.031517] (-) TimerEvent: {}
+[19.103358] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '/home/joaoferreira/beta/beta_firmware/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent', '-DCMAKE_INSTALL_PREFIX=/home/joaoferreira/beta/install/micro_ros_agent'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs/lib:/home/joaoferreira/beta/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[19.131669] (-) TimerEvent: {}
+[19.232080] (-) TimerEvent: {}
+[19.241330] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[19.332227] (-) TimerEvent: {}
+[19.432655] (-) TimerEvent: {}
+[19.533013] (-) TimerEvent: {}
+[19.633401] (-) TimerEvent: {}
+[19.733926] (-) TimerEvent: {}
+[19.834395] (-) TimerEvent: {}
+[19.934880] (-) TimerEvent: {}
+[20.035283] (-) TimerEvent: {}
+[20.135855] (-) TimerEvent: {}
+[20.236464] (-) TimerEvent: {}
+[20.336951] (-) TimerEvent: {}
+[20.437301] (-) TimerEvent: {}
+[20.547170] (-) TimerEvent: {}
+[20.647711] (-) TimerEvent: {}
+[20.748299] (-) TimerEvent: {}
+[20.848915] (-) TimerEvent: {}
+[20.949432] (-) TimerEvent: {}
+[21.049989] (-) TimerEvent: {}
+[21.151164] (-) TimerEvent: {}
+[21.251876] (-) TimerEvent: {}
+[21.321653] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_cmake: 3.1.6 (/opt/ros/humble/share/rosidl_cmake/cmake)\n'}
+[21.322525] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[21.352061] (-) TimerEvent: {}
+[21.383590] (micro_ros_agent) StdoutLine: {'line': b'-- Found fastrtps_cmake_module: 2.2.2 (/opt/ros/humble/share/fastrtps_cmake_module/cmake)\n'}
+[21.421846] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_dds_common: 1.6.0 (/opt/ros/humble/share/rmw_dds_common/cmake)\n'}
+[21.452219] (-) TimerEvent: {}
+[21.501355] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[21.522601] (micro_ros_agent) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[21.552375] (-) TimerEvent: {}
+[21.652986] (-) TimerEvent: {}
+[21.698880] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[21.727217] (micro_ros_agent) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[21.753104] (-) TimerEvent: {}
+[21.853567] (-) TimerEvent: {}
+[21.954167] (-) TimerEvent: {}
+[22.054730] (-) TimerEvent: {}
+[22.155273] (-) TimerEvent: {}
+[22.185707] (micro_ros_agent) StdoutLine: {'line': b'-- Found rmw_fastrtps_shared_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_shared_cpp/cmake)\n'}
+[22.255411] (-) TimerEvent: {}
+[22.317329] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[22.319227] (micro_ros_agent) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[22.320552] (micro_ros_agent) StdoutLine: {'line': b'-- Found micro_ros_msgs: 3.0.1 (/home/joaoferreira/beta/install/micro_ros_msgs/share/micro_ros_msgs/cmake)\n'}
+[22.355532] (-) TimerEvent: {}
+[22.456016] (-) TimerEvent: {}
+[22.470739] (micro_ros_agent) StdoutLine: {'line': b'-- Configuring done\n'}
+[22.556136] (-) TimerEvent: {}
+[22.618834] (micro_ros_agent) StdoutLine: {'line': b'-- Generating done\n'}
+[22.627376] (micro_ros_agent) StdoutLine: {'line': b'-- Build files have been written to: /home/joaoferreira/beta/build/micro_ros_agent\n'}
+[22.640480] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[22.641954] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'build'}
+[22.643639] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/joaoferreira/beta/build/micro_ros_agent', '--', '-j4', '-l4'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs/lib:/home/joaoferreira/beta/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[22.656333] (-) TimerEvent: {}
+[22.756820] (-) TimerEvent: {}
+[22.796874] (micro_ros_agent) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target micro_ros_agent\x1b[0m\n'}
+[22.856958] (-) TimerEvent: {}
+[22.957447] (-) TimerEvent: {}
+[23.057952] (-) TimerEvent: {}
+[23.065383] (micro_ros_agent) StdoutLine: {'line': b'[100%] Built target micro_ros_agent\n'}
+[23.095072] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[23.100559] (micro_ros_agent) JobProgress: {'identifier': 'micro_ros_agent', 'progress': 'install'}
+[23.102122] (micro_ros_agent) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/joaoferreira/beta/build/micro_ros_agent'], 'cwd': '/home/joaoferreira/beta/build/micro_ros_agent', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:en'), ('USER', 'joaoferreira'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs/lib:/home/joaoferreira/beta/install/micro_ros_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/joaoferreira'), ('OLDPWD', '/home/joaoferreira'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1267'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/joaoferreira/beta/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'joaoferreira'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'joaoferreira'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/joaoferreira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/joaoferreira/.platformio/penv/bin'), ('SESSION_MANAGER', 'local/joaoferreira:@/tmp/.ICE-unix/1231,unix/joaoferreira:/tmp/.ICE-unix/1231'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d9ad13c_08a4_4600_a43f_6a8c1e47f641'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CWXZ22'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.235'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/joaoferreira/beta/build/micro_ros_agent'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/joaoferreira/beta/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/joaoferreira/beta/install/micro_ros_msgs:/home/joaoferreira/beta/install/micro_ros_setup:/home/joaoferreira/beta/install/micro_ros_agent:/home/joaoferreira/beta/install/beta_controller:/opt/ros/humble')]), 'shell': False}
+[23.121001] (micro_ros_agent) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.123509] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/ament_index/resource_index/package_run_dependencies/micro_ros_agent\n'}
+[23.124371] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/ament_index/resource_index/parent_prefix_path/micro_ros_agent\n'}
+[23.124571] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.sh\n'}
+[23.125180] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/environment/ament_prefix_path.dsv\n'}
+[23.125331] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/environment/path.sh\n'}
+[23.126562] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/environment/path.dsv\n'}
+[23.126771] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/local_setup.bash\n'}
+[23.127598] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/local_setup.sh\n'}
+[23.127784] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/local_setup.zsh\n'}
+[23.127928] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/local_setup.dsv\n'}
+[23.128176] (micro_ros_agent) StdoutLine: {'line': b'-- Installing: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/package.dsv\n'}
+[23.134899] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/ament_index/resource_index/packages/micro_ros_agent\n'}
+[23.135999] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[23.136698] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig.cmake\n'}
+[23.136835] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/cmake/micro_ros_agentConfig-version.cmake\n'}
+[23.136952] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/package.xml\n'}
+[23.158500] (-) TimerEvent: {}
+[23.178206] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent\n'}
+[23.178654] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/launch\n'}
+[23.179106] (micro_ros_agent) StdoutLine: {'line': b'-- Up-to-date: /home/joaoferreira/beta/install/micro_ros_agent/share/micro_ros_agent/launch/micro_ros_agent_launch.py\n'}
+[23.183263] (micro_ros_agent) CommandEnded: {'returncode': 0}
+[23.258655] (-) TimerEvent: {}
+[23.358979] (-) TimerEvent: {}
+[23.396656] (micro_ros_agent) JobEnded: {'identifier': 'micro_ros_agent', 'rc': 0}
+[23.397296] (-) EventReactorShutdown: {}

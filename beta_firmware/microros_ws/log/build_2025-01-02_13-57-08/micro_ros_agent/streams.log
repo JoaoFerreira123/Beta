@@ -1,0 +1,73 @@
+[1.649s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joaoferreira/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/joaoferreira/microros_ws/install/micro_ros_agent
+[2.478s] Not searching for unused variables given on the command line.
+[3.682s] -- The C compiler identification is GNU 11.4.0
+[3.745s] -- Detecting C compiler ABI info
+[4.416s] -- Detecting C compiler ABI info - done
+[4.429s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.430s] -- Detecting C compile features
+[4.452s] -- Detecting C compile features - done
+[4.594s] -- The CXX compiler identification is GNU 11.4.0
+[4.609s] -- Detecting CXX compiler ABI info
+[5.153s] -- Detecting CXX compiler ABI info - done
+[5.170s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.173s] -- Detecting CXX compile features
+[5.174s] -- Detecting CXX compile features - done
+[5.904s] -- Configuring done
+[5.912s] -- Generating done
+[5.915s] -- Build files have been written to: /home/joaoferreira/microros_ws/build/micro_ros_agent
+[5.923s] Invoked command in '/home/joaoferreira/microros_ws/build/micro_ros_agent' returned '0': AMENT_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/joaoferreira/microros_ws/src/uros/micro-ROS-Agent/micro_ros_agent -DUAGENT_BUILD_EXECUTABLE=OFF -DUAGENT_P2P_PROFILE=OFF --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX=/home/joaoferreira/microros_ws/install/micro_ros_agent
+[5.933s] Invoking command in '/home/joaoferreira/microros_ws/build/micro_ros_agent': AMENT_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs:/home/joaoferreira/microros_ws/install/micro_ros_setup:/opt/ros/humble LD_LIBRARY_PATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/joaoferreira/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/joaoferreira/microros_ws/build/micro_ros_agent -- -j4 -l4
+[6.080s] [  6%] [34m[1mCreating directories for 'xrceagent'[0m
+[6.311s] [ 12%] [34m[1mPerforming download step (git clone) for 'xrceagent'[0m
+[6.375s] Cloning into 'xrceagent'...
+[11.037s] HEAD is now at 57d0862 Release v2.4.2
+[11.472s] [ 18%] [34m[1mPerforming update step for 'xrceagent'[0m
+[11.554s] [ 25%] [34m[1mNo patch step for 'xrceagent'[0m
+[11.621s] [ 31%] [34m[1mPerforming configure step for 'xrceagent'[0m
+[11.694s] loading initial cache file /home/joaoferreira/microros_ws/build/micro_ros_agent/agent/tmp/xrceagent-cache-.cmake
+[12.053s] -- The C compiler identification is GNU 11.4.0
+[12.098s] -- Detecting C compiler ABI info
+[12.264s] -- Detecting C compiler ABI info - done
+[12.281s] -- Check for working C compiler: /usr/bin/cc - skipped
+[12.286s] -- Detecting C compile features
+[12.330s] -- Detecting C compile features - done
+[12.593s] -- The CXX compiler identification is GNU 11.4.0
+[12.650s] -- Detecting CXX compiler ABI info
+[13.003s] -- Detecting CXX compiler ABI info - done
+[13.019s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[13.020s] -- Detecting CXX compile features
+[13.021s] -- Detecting CXX compile features - done
+[13.265s] -- Looking for pthread.h
+[13.689s] -- Looking for pthread.h - found
+[13.689s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[13.873s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[13.875s] -- Found Threads: TRUE  
+[13.939s] -- Configuring done
+[13.945s] -- Generating done
+[13.946s] -- Build files have been written to: /home/joaoferreira/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
+[13.987s] [ 37%] [34m[1mPerforming build step for 'xrceagent'[0m
+[14.070s] [ 12%] [34m[1mCreating directories for 'uagent'[0m
+[14.446s] [ 25%] [34m[1mNo download step for 'uagent'[0m
+[14.599s] [ 37%] [34m[1mNo update step for 'uagent'[0m
+[14.651s] [ 50%] [34m[1mNo patch step for 'uagent'[0m
+[14.761s] [ 62%] [34m[1mPerforming configure step for 'uagent'[0m
+[14.787s] loading initial cache file /home/joaoferreira/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build/uagent-prefix/tmp/uagent-cache-.cmake
+[14.797s] -- Setting build type to 'Release' as none was specified.
+[15.427s] -- Found tinyxml2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so  
+[15.428s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[15.428s]   The package name passed to `find_package_handle_standard_args` (tinyxml2)
+[15.428s]   does not match the name of the calling package (TinyXML2).  This can lead
+[15.428s]   to problems in calling code that expects `find_package` result variables
+[15.428s]   (e.g., `_FOUND`) to follow a certain pattern.
+[15.428s] Call Stack (most recent call first):
+[15.429s]   cmake/modules/FindTinyXML2.cmake:40 (find_package_handle_standard_args)
+[15.429s]   /opt/ros/humble/share/fastrtps/cmake/fastrtps-config.cmake:51 (find_package)
+[15.429s]   CMakeLists.txt:153 (find_package)
+[15.429s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[15.429s] [0m
+[16.114s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[16.152s] -- Configuring done
+[16.199s] -- Generating done
+[16.201s] -- Build files have been written to: /home/joaoferreira/microros_ws/build/micro_ros_agent/agent/src/xrceagent-build
+[16.287s] [ 75%] [34m[1mPerforming build step for 'uagent'[0m
+[16.381s] [  2%] [32mBuilding CXX object CMakeFiles/microxrcedds_agent.dir/src/cpp/Agent.cpp.o[0m

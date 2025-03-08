@@ -63,7 +63,7 @@ void subscription_callback_motor2(const void * msgin)
 void subscription_callback_motor3(const void * msgin)
 {  
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if(msg->data == 0){
+  if(msg->data == 1){
     strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // amarelo
   }
   
@@ -74,7 +74,7 @@ void subscription_callback_motor3(const void * msgin)
 void subscription_callback_motor4(const void * msgin)
 {  
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if(msg->data == 0){
+  if(msg->data == 1){
     strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // verde
   }
   

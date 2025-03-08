@@ -10,8 +10,12 @@
 
 rcl_subscription_t subscriber1;
 rcl_subscription_t subscriber2;
+rcl_subscription_t subscriber3;
+
 std_msgs__msg__Int32 msg1;
 std_msgs__msg__Int32 msg2;
+std_msgs__msg__Int32 msg3;
+
 rclc_executor_t executor;
 rclc_support_t support;
 rcl_allocator_t allocator;
@@ -48,6 +52,19 @@ void subscription_callback_motor1(const void * msgin)
 }
 
 void subscription_callback_motor2(const void * msgin)
+{  
+  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
+  if(msg->data == 0){
+    strip.fill(strip.Color(255, 0, 0), 0, NUM_LEDS); // Vermelho
+  }
+  else if(msg->data == 1){
+    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo
+  }
+  
+  strip.show();
+}
+
+void subscription_callback_motor3(const void * msgin)
 {  
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
   if(msg->data == 0){
@@ -102,13 +119,22 @@ void setup() {
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
     "motorA"));
 
+  // create subscriber for motor3
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber3,
+    &node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+    "motorB"));
+
+
   // create executor
-  RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
+  RCCHECK(rclc_executor_init(&executor, &support.context, 3, &allocator));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber1, &msg1, &subscription_callback_motor1, ON_NEW_DATA));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber2, &msg2, &subscription_callback_motor2, ON_NEW_DATA));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber3, &msg3, &subscription_callback_motor3, ON_NEW_DATA));
 }
 
 void loop() {
-  delay(100);
+  
   RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
 }

@@ -7,6 +7,16 @@
 #include <rclc/executor.h>
 #include <std_msgs/msg/int32.h>
 #include <Adafruit_NeoPixel.h>
+#include <ESP32Servo.h>
+
+static const int motorR = 25;
+static const int motorA = 32;
+static const int motorB = 33;
+static const int motorC = 26;
+static const int motorD = 27;
+static const int motorG = 13;
+
+Servo baseGir, bracoA, bracoB, bracoC, bracoD, garra;
 
 rcl_subscription_t subscriber1;
 rcl_subscription_t subscriber2;
@@ -95,6 +105,13 @@ void subscription_callback_motor5(const void * msgin) {
   if (msg->data == 1) {
     strip.fill(strip.Color(255, 0, 255), 0, NUM_LEDS); // xxx
   }
+  int id_motor = (msg->data / 1000);
+  int pos_bracoD = (msg->data % 1000); //resto da divisao
+  strip.fill(strip.Color(255, 0, 255), 0, NUM_LEDS); 
+  bracoD.write(pos_bracoD);
+  strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+
+
   strip.show();
 }
 
@@ -119,6 +136,13 @@ void setup() {
   }
 
   delay(3000);
+
+  baseGir.attach(motorR);
+  bracoA.attach(motorA);
+  bracoB.attach(motorB);
+  bracoC.attach(motorC);
+  bracoD.attach(motorD);
+  garra.attach(motorG);
 
   allocator = rcl_get_default_allocator();
 

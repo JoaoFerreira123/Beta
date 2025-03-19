@@ -1,0 +1,25 @@
+[4.296s] Invoking command in '/home/joaoferreira/beta/src/beta_controller': PYTHONPATH=/home/joaoferreira/beta/build/beta_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/beta_controller build --build-base /home/joaoferreira/beta/build/beta_controller/build install --record /home/joaoferreira/beta/build/beta_controller/install.log --single-version-externally-managed install_data
+[4.729s] running egg_info
+[4.731s] writing ../../build/beta_controller/beta_controller.egg-info/PKG-INFO
+[4.732s] writing dependency_links to ../../build/beta_controller/beta_controller.egg-info/dependency_links.txt
+[4.733s] writing entry points to ../../build/beta_controller/beta_controller.egg-info/entry_points.txt
+[4.733s] writing requirements to ../../build/beta_controller/beta_controller.egg-info/requires.txt
+[4.733s] writing top-level names to ../../build/beta_controller/beta_controller.egg-info/top_level.txt
+[4.762s] reading manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+[4.764s] writing manifest file '../../build/beta_controller/beta_controller.egg-info/SOURCES.txt'
+[4.765s] running build
+[4.765s] running build_py
+[4.766s] copying beta_controller/beta_motion_planner.py -> /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller
+[4.766s] running install
+[4.767s] running install_lib
+[4.777s] copying /home/joaoferreira/beta/build/beta_controller/build/lib/beta_controller/beta_motion_planner.py -> /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller
+[4.778s] byte-compiling /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller/beta_motion_planner.py to beta_motion_planner.cpython-310.pyc
+[4.783s] running install_data
+[4.784s] running install_egg_info
+[4.791s] removing '/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[4.798s] Copying ../../build/beta_controller/beta_controller.egg-info to /home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages/beta_controller-0.0.0-py3.10.egg-info
+[4.845s] running install_scripts
+[4.915s] Installing beta_gui script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller
+[4.918s] Installing beta_motion_planner script to /home/joaoferreira/beta/install/beta_controller/lib/beta_controller
+[4.918s] writing list of installed files to '/home/joaoferreira/beta/build/beta_controller/install.log'
+[4.958s] Invoked command in '/home/joaoferreira/beta/src/beta_controller' returned '0': PYTHONPATH=/home/joaoferreira/beta/build/beta_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joaoferreira/beta/install/beta_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/beta_controller build --build-base /home/joaoferreira/beta/build/beta_controller/build install --record /home/joaoferreira/beta/build/beta_controller/install.log --single-version-externally-managed install_data

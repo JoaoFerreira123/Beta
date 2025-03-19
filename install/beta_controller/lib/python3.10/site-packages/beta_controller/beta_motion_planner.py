@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from std_msgs.msg import Int32
 import json
 import time
 
@@ -15,7 +16,11 @@ class beta_motion_planner(Node):
         super().__init__('beta_motion_planner')  # Nome do nó
 
         # Criando o publisher para o tópico /beta_commands
-        self.publisher_ = self.create_publisher(String, '/beta_commands', 10)
+        self.beta_commands_publisher = self.create_publisher(String, '/beta_commands', 10)
+
+        # Publisher para as posições dos motores
+        self.motor_position_publisher = self.create_publisher(Int32, '/motor_position', 10)
+
         # Inicializa um timer para publicar a mensagem a cada 1 segundo
         self.timer = self.create_timer(0.01, self.check_and_publish)
 
@@ -33,6 +38,7 @@ class beta_motion_planner(Node):
         self.reproducao_index = 0  # Índice para controlar a reprodução das posições
         self.reproducao_start_time = None  # Tempo de início da reprodução
         self.last_gravar_posicao_state = False  # Estado anterior do botão gravar_posicao
+        self.slider_changed = False  # Flag para indicar se algum slider foi movido
 
     def listener_callback(self, msg):
         global gui_commands  # Usando a variável global gui_commands
@@ -41,6 +47,14 @@ class beta_motion_planner(Node):
         gui_commands = string_to_dict(msg.data)
         
         if gui_commands is not None:
+            # Verifica se algum slider foi movido
+            current_slider_values = {key: gui_commands[key] for key in gui_commands if key.endswith("_slider_pos")}
+            if current_slider_values != self.last_slider_values:
+                self.slider_changed = True
+                self.last_slider_values = current_slider_values
+            else:
+                self.slider_changed = False
+
             # Passa o dicionário para o método que irá verificar e publicar a mensagem
             self.state_machine()
 
@@ -180,13 +194,62 @@ class beta_motion_planner(Node):
         print("Matriz de posições gravadas:")
         for i, pos in enumerate(self.recorded_positions):
             print(f"Posição {i + 1}: {pos}")
-
+                
     def check_and_publish(self):
+        # Publica a mensagem de estado no tópico /beta_commands (mantido)
         if self.command_string != "":
             msg = String()
             msg.data = self.command_string
-            self.publisher_.publish(msg)
+            self.beta_commands_publisher.publish(msg)  # Usando o nome correto
             self.command_string = ""  # Limpa a string após publicar
+
+        # Publica as posições dos motores no tópico /motor_position apenas se algum slider foi movido
+        if self.slider_changed:
+            for motor_name, angle in self.last_slider_values.items():
+                # Mapeia diretamente os nomes dos sliders para os IDs dos motores
+                if motor_name == 'base_gir_slider_pos':
+                    motor_id = 1  # baseGir
+                elif motor_name == 'base_bracoA_slider_pos':
+                    motor_id = 2  # bracoA
+                elif motor_name == 'base_bracoB_slider_pos':
+                    motor_id = 3  # bracoB
+                elif motor_name == 'base_bracoC_slider_pos':
+                    motor_id = 4  # bracoC
+                elif motor_name == 'base_bracoD_slider_pos':
+                    motor_id = 5  # bracoD
+                else:
+                    motor_id = None  # Ignora sliders não mapeados
+
+                # Publica a mensagem do motor se o ID for válido
+                if motor_id is not None:
+                    motor_message = self.format_motor_message(motor_id, angle)
+                    self.publish_motor_position(motor_message)
+            self.slider_changed = False  # Reseta a flag após publicar
+
+    def publish_motor_position(self, motor_message):
+        msg = Int32()
+        msg.data = motor_message
+        self.motor_position_publisher.publish(msg)
+        print(f"Publicado no /motor_position: {msg.data}")
+
+    def format_motor_message(self, motor_id, angle):
+        """
+        Formata a mensagem do motor.
+        :param motor_id: ID do motor (1 a 6).
+        :param angle: Ângulo do motor (0 a 180).
+        :return: Inteiro de 4 dígitos (ID + ângulo).
+        """
+        if motor_id < 1 or motor_id > 9:
+            raise ValueError("ID do motor deve estar entre 1 e 6.")
+        if angle < 0 or angle > 180:
+            raise ValueError("Ângulo deve estar entre 0 e 180.")
+        
+        # Formata o ângulo para 3 dígitos, preenchendo com zeros à esquerda
+        angle_str = f"{angle:03d}"
+        
+        # Combina o ID do motor e o ângulo em um único número
+        return int(f"{motor_id}{angle_str}")
+
 
 # Função para converter a string JSON para um dicionário
 def string_to_dict(string):
@@ -196,6 +259,7 @@ def string_to_dict(string):
     except json.JSONDecodeError:
         print("Erro ao converter a string para um dicionário.")
         return None
+
 
 def main(args=None):
     rclpy.init(args=args)

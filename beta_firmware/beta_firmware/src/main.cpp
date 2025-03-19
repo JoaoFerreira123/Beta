@@ -157,7 +157,7 @@ void setup() {
   RCCHECK(rclc_subscription_init_default(&subscriber2, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorA"));
   RCCHECK(rclc_subscription_init_default(&subscriber3, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorB"));
   RCCHECK(rclc_subscription_init_default(&subscriber4, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorC"));
-  RCCHECK(rclc_subscription_init_default(&subscriber5, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorD"));
+  RCCHECK(rclc_subscription_init_default(&subscriber5, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motor_position"));
 
   // Cria o executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 5, &allocator));

@@ -9,26 +9,26 @@
 #include <Adafruit_NeoPixel.h>
 #include <ESP32Servo.h>
 
-static const int motorR = 25;
+static const int motorR = 13;
 static const int motorA = 32;
 static const int motorB = 33;
-static const int motorC = 26;
-static const int motorD = 27;
-static const int motorG = 13;
+static const int motorC = 27;
+static const int motorD = 25;
+static const int motorG = 26;
 
 Servo baseGir, bracoA, bracoB, bracoC, bracoD, garra;
 
-rcl_subscription_t subscriber1;
+rcl_subscription_t subscriber_state;
 rcl_subscription_t subscriber2;
 rcl_subscription_t subscriber3;
 rcl_subscription_t subscriber4;
-rcl_subscription_t subscriber5;
+rcl_subscription_t subscriber_motor_position;
 
-std_msgs__msg__Int32 msg1;
+std_msgs__msg__Int32 msg_state;
 std_msgs__msg__Int32 msg2;
 std_msgs__msg__Int32 msg3;
 std_msgs__msg__Int32 msg4;
-std_msgs__msg__Int32 msg5;
+std_msgs__msg__Int32 msg_motor_position;
 
 rclc_executor_t executor;
 rclc_support_t support;
@@ -92,7 +92,7 @@ void subscription_callback_motor3(const void * msgin) {
   strip.show();
 }
 
-void subscription_callback_motor4(const void * msgin) {
+void subscription_callback_state(const void * msgin) {
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
   if (msg->data == 1) {
     strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // Verde
@@ -100,16 +100,44 @@ void subscription_callback_motor4(const void * msgin) {
   strip.show();
 }
 
-void subscription_callback_motor5(const void * msgin) {
+void subscription_callback_motor_position(const void * msgin) {
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 1) {
-    strip.fill(strip.Color(255, 0, 255), 0, NUM_LEDS); // xxx
-  }
-  int id_motor = (msg->data / 1000);
-  int pos_bracoD = (msg->data % 1000); //resto da divisao
+
   strip.fill(strip.Color(255, 0, 255), 0, NUM_LEDS); 
-  bracoD.write(pos_bracoD);
-  strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  int id_motor = (msg->data / 1000);
+
+  if (id_motor == 1){
+    int pos_bracoR = (msg->data % 1000); //resto da divisao
+    baseGir.write(pos_bracoR);
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  }
+
+  if (id_motor == 2){
+    int pos_bracoA = (msg->data % 1000); //resto da divisao
+    bracoA.write(pos_bracoA);
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  }
+
+  if (id_motor == 3){
+    int pos_bracoB = (msg->data % 1000); //resto da divisao
+    bracoB.write(pos_bracoB);
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  }
+
+  if (id_motor == 4){
+    int pos_bracoC = (msg->data % 1000); //resto da divisao
+    bracoC.write(pos_bracoC);
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  }
+
+  if (id_motor == 5){
+    int pos_bracoD = (msg->data % 1000); //resto da divisao
+    bracoD.write(pos_bracoD);
+
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
+  }
+
+
 
 
   strip.show();
@@ -153,19 +181,19 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node, "hardware_controller", "", &support));
 
   // Cria os subscribers
-  RCCHECK(rclc_subscription_init_default(&subscriber1, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorR"));
+
   RCCHECK(rclc_subscription_init_default(&subscriber2, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorA"));
   RCCHECK(rclc_subscription_init_default(&subscriber3, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorB"));
-  RCCHECK(rclc_subscription_init_default(&subscriber4, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorC"));
-  RCCHECK(rclc_subscription_init_default(&subscriber5, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motor_position"));
+  RCCHECK(rclc_subscription_init_default(&subscriber_state, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "state"));
+  RCCHECK(rclc_subscription_init_default(&subscriber_motor_position, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motor_position"));
 
   // Cria o executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 5, &allocator));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber1, &msg1, &subscription_callback_motor1, ON_NEW_DATA));
+
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber2, &msg2, &subscription_callback_motor2, ON_NEW_DATA));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber3, &msg3, &subscription_callback_motor3, ON_NEW_DATA));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber4, &msg4, &subscription_callback_motor4, ON_NEW_DATA));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber5, &msg5, &subscription_callback_motor5, ON_NEW_DATA));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_state, &msg_state, &subscription_callback_state, ON_NEW_DATA));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_motor_position, &msg_motor_position, &subscription_callback_motor_position, ON_NEW_DATA));
 }
 
 void loop() {

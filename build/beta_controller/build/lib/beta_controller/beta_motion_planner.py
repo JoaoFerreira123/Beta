@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
-from std_msgs.msg import Int32
+from std_msgs.msg import String, Int32
 import json
 import time
 
@@ -15,8 +14,8 @@ class beta_motion_planner(Node):
     def __init__(self):
         super().__init__('beta_motion_planner')  # Nome do nó
 
-        # Criando o publisher para o tópico /beta_commands
-        self.beta_commands_publisher = self.create_publisher(String, '/beta_commands', 10)
+        # Criando o publisher para o tópico /beta_state
+        self.beta_state_publisher = self.create_publisher(Int32, '/beta_state', 10)
 
         # Publisher para as posições dos motores
         self.motor_position_publisher = self.create_publisher(Int32, '/motor_position', 10)
@@ -47,32 +46,24 @@ class beta_motion_planner(Node):
         gui_commands = string_to_dict(msg.data)
         
         if gui_commands is not None:
-            # Verifica se algum slider foi movido
-            current_slider_values = {key: gui_commands[key] for key in gui_commands if key.endswith("_slider_pos")}
-            if current_slider_values != self.last_slider_values:
-                self.slider_changed = True
-                self.last_slider_values = current_slider_values
-            else:
-                self.slider_changed = False
-
             # Passa o dicionário para o método que irá verificar e publicar a mensagem
             self.state_machine()
 
     def state_machine(self):
-        #print(f"Estado atual: {self.state}")
-        
+        print(f"Estado atual: {self.state}")  # Log para depuração
+
         if 'stop' in gui_commands and gui_commands['stop'] == True:
             self.state = "E0"
             self.E0()
             self.timer_start = None
-            self.inactivity_timer = None  # Reseta o temporizador de inatividade
-            self.slider_active = False  # Reseta a flag de sliders ativos
-            self.reproducao_index = 0  # Reseta o índice de reprodução
+            self.inactivity_timer = None
+            self.slider_active = False
+            self.reproducao_index = 0
 
         elif self.state == "E0" and 'start' in gui_commands and gui_commands['start'] == True:
             self.state = "E1"
             self.E1()
-            self.timer_start = time.time()  # Inicia o timer
+            self.timer_start = time.time()
 
         elif self.state == "E1" and self.timer_start is not None:
             elapsed_time = time.time() - self.timer_start
@@ -85,35 +76,23 @@ class beta_motion_planner(Node):
         elif self.state == "E2":
             current_slider_values = {key: gui_commands[key] for key in gui_commands if key.endswith("_slider_pos")}
             
-            # Verifica se os valores dos sliders mudaram em relação aos últimos valores salvos
+            # Verifica se os valores dos sliders mudaram
             if current_slider_values != self.last_slider_values:
-                self.slider_active = True  # Sliders estão sendo movimentados
-                self.last_slider_values = current_slider_values  # Atualiza os últimos valores
-                self.inactivity_timer = time.time()  # Reinicia o temporizador de inatividade
-                print("Sliders em movimento...")
-            
-            # Se os sliders estiverem ativos e pararem de ser movimentados por 1 segundos, volta para E2
-            if self.slider_active and time.time() - self.inactivity_timer >= 1:
-                self.slider_active = False  # Reseta a flag de sliders ativos
-                self.state = "E2"
-                self.E2()
-                print("Sliders parados por 1 segundos. Voltando para E2.")
-
-            # Transita para E3 apenas se os sliders estiverem ativos
-            if self.slider_active:
+                print(f"Sliders movidos! Valores atuais: {current_slider_values}")  # Log para depuração
+                self.last_slider_values = current_slider_values  # Atualiza os últimos valores ANTES de mudar o estado
                 self.state = "E3"
                 self.E3()
+                self.inactivity_timer = time.time()  # Reinicia o temporizador de inatividade
+                print("Transição para E3: Controle manual com easing")  # Log para depuração
 
             elif 'reproduzir_pos' in gui_commands and gui_commands['reproduzir_pos'] == True:
                 self.state = "E4"
                 self.E4()
-                self.reproducao_start_time = time.time()  # Inicia o timer de reprodução
-                self.reproducao_index = 0  # Reseta o índice de reprodução
+                self.reproducao_start_time = time.time()
+                self.reproducao_index = 0
 
             elif 'gravar_posicao' in gui_commands:
-                # Verifica se houve uma transição de False para True
                 if gui_commands['gravar_posicao'] == True and self.last_gravar_posicao_state == False:
-                    # Grava as posições dos sliders como uma linha da matriz
                     slider_positions = [
                         gui_commands["base_gir_slider_pos"],
                         gui_commands["base_bracoA_slider_pos"],
@@ -122,55 +101,46 @@ class beta_motion_planner(Node):
                         gui_commands["base_bracoD_slider_pos"],
                         gui_commands["abrir_garra"]
                     ]
-                    self.recorded_positions.append(slider_positions)  # Adiciona a linha à matriz
+                    self.recorded_positions.append(slider_positions)
                     print(f"Posição gravada no estado E2: {slider_positions}")
                     print(f"Total de posições gravadas: {len(self.recorded_positions)}")
                 
-                # Atualiza o estado anterior do botão gravar_posicao
                 self.last_gravar_posicao_state = gui_commands['gravar_posicao']
 
-            # Verifica se a chave "apagar_tudo" é True e apaga todas as posições gravadas
             if 'apagar_tudo' in gui_commands and gui_commands['apagar_tudo'] == True:
-                self.recorded_positions = []  # Limpa a lista de posições gravadas
+                self.recorded_positions = []
                 print("Todas as posições gravadas foram apagadas.")
 
         elif self.state == "E3":
             current_slider_values = {key: gui_commands[key] for key in gui_commands if key.endswith("_slider_pos")}
             
-            # Verifica se os valores dos sliders mudaram
+            # Verifica se os sliders pararam de ser movidos por 1 segundo
             if current_slider_values != self.last_slider_values:
-                self.slider_active = True  # Sliders estão sendo movimentados
-                self.last_slider_values = current_slider_values  # Atualiza os últimos valores
+                self.last_slider_values = current_slider_values
                 self.inactivity_timer = time.time()  # Reinicia o temporizador de inatividade
                 print("Sliders em movimento...")
-            else:
-                # Se os sliders não mudaram por 1 segundos, volta para E2
-                if time.time() - self.inactivity_timer >= 1:
-                    self.slider_active = False  # Reseta a flag de sliders ativos
-                    self.state = "E2"
-                    self.E2()
-                    print("Sliders parados por 1 segundos. Voltando para E2.")
+            elif time.time() - self.inactivity_timer >= 1:
+                self.state = "E2"
+                self.E2()
+                print("Sliders parados por 1 segundo. Voltando para E2.")
 
         elif self.state == "E4":
             if 'reproduzir_pos' in gui_commands and gui_commands['reproduzir_pos'] == False:
                 self.state = "E2"
                 self.E2()
-                self.reproducao_index = 0  # Reseta o índice de reprodução
+                self.reproducao_index = 0
             else:
-                # Reproduzir as posições gravadas
                 if self.reproducao_index < len(self.recorded_positions):
                     pos = self.recorded_positions[self.reproducao_index]
                     print(f"Reproduzindo posição {self.reproducao_index + 1}: {pos}")
-                    # Aqui você pode adicionar a lógica para mover o robô para a posição gravada
-                    self.reproducao_index += 1  # Avança para a próxima posição
+                    self.reproducao_index += 1
                 else:
-                    # Todas as posições foram reproduzidas
                     if time.time() - self.reproducao_start_time >= 5:
                         self.state = "E2"
                         self.E2()
-                        self.reproducao_index = 0  # Reseta o índice de reprodução
+                        self.reproducao_index = 0
                         print("Reprodução concluída. Voltando para E2.")
-
+                        
     def E0(self):
         self.command_string += "E0"
         print("Executando E0: Parado e bloqueado")
@@ -196,12 +166,13 @@ class beta_motion_planner(Node):
             print(f"Posição {i + 1}: {pos}")
                 
     def check_and_publish(self):
-        # Publica a mensagem de estado no tópico /beta_commands (mantido)
-        if self.command_string != "":
-            msg = String()
-            msg.data = self.command_string
-            self.beta_commands_publisher.publish(msg)  # Usando o nome correto
-            self.command_string = ""  # Limpa a string após publicar
+        # Publica o estado no tópico /beta_state como um Int32
+        if self.state:
+            state_number = int(self.state[1:])  # Extrai o número do estado (E0 -> 0, E1 -> 1, etc.)
+            msg = Int32()
+            msg.data = state_number
+            self.beta_state_publisher.publish(msg)
+            #print(f"Publicado no /beta_state: {msg.data}")
 
         # Publica as posições dos motores no tópico /motor_position apenas se algum slider foi movido
         if self.slider_changed:
@@ -230,7 +201,7 @@ class beta_motion_planner(Node):
         msg = Int32()
         msg.data = motor_message
         self.motor_position_publisher.publish(msg)
-        print(f"Publicado no /motor_position: {msg.data}")
+        #print(f"Publicado no /motor_position: {msg.data}")
 
     def format_motor_message(self, motor_id, angle):
         """

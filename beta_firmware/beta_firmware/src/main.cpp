@@ -19,15 +19,9 @@ static const int motorG = 26;
 Servo baseGir, bracoA, bracoB, bracoC, bracoD, garra;
 
 rcl_subscription_t subscriber_state;
-rcl_subscription_t subscriber2;
-rcl_subscription_t subscriber3;
-rcl_subscription_t subscriber4;
 rcl_subscription_t subscriber_motor_position;
 
 std_msgs__msg__Int32 msg_state;
-std_msgs__msg__Int32 msg2;
-std_msgs__msg__Int32 msg3;
-std_msgs__msg__Int32 msg4;
 std_msgs__msg__Int32 msg_motor_position;
 
 rclc_executor_t executor;
@@ -68,46 +62,94 @@ void handle_error(rcl_ret_t error, int line) {
   }
 }
 
-void subscription_callback_motor1(const void * msgin) {
-  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 1) {
-    strip.fill(strip.Color(0, 0, 255), 0, NUM_LEDS); // Azul
+void blinkLEDStrip(uint32_t color, unsigned long blinkInterval) {
+  static unsigned long previousMillis = 0;  // Armazena o último tempo que o LED foi atualizado
+  static bool ledState = false;            // Estado do LED (ligado/desligado)
+
+  unsigned long currentMillis = millis();  // Obtém o tempo atual
+
+  // Verifica se o intervalo de tempo passou
+  if (currentMillis - previousMillis >= blinkInterval) {
+    previousMillis = currentMillis;  // Salva o tempo atual
+
+    // Alterna o estado do LED
+    if (ledState == false) {
+      strip.fill(color, 0, NUM_LEDS);  // Liga o LED com a cor especificada
+      ledState = true;
+    } else {
+      strip.fill(strip.Color(0, 0, 0), 0, NUM_LEDS);  // Desliga o LED (Preto)
+      ledState = false;
+    }
+
+    strip.show();  // Atualiza a fita de LED com o novo estado
   }
-  strip.show();
 }
 
-void subscription_callback_motor2(const void * msgin) {
-  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 1) {
-    strip.fill(strip.Color(255, 0, 0), 0, NUM_LEDS); // Vermelho
+void fadeRedEffect() {
+  static unsigned long previousMillis = 0;  // Armazena o último tempo que o LED foi alterado
+  static int brightness = 0;               // Brilho atual do LED
+  static bool increasing = true;           // Direção do fade (aumentando ou diminuindo)
+  const long interval = 20;                // Intervalo de tempo para atualizar o fade (em milissegundos)
+
+  unsigned long currentMillis = millis();  // Obtém o tempo atual
+
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+
+    // Atualiza o brilho
+    if (increasing) {
+      brightness += 5; // Aumenta o brilho
+      if (brightness >= 255) {
+        brightness = 255;
+        increasing = false; // Inverte a direção (começa a diminuir)
+      }
+    } else {
+      brightness -= 5; // Diminui o brilho
+      if (brightness <= 0) {
+        brightness = 0;
+        increasing = true; // Inverte a direção (começa a aumentar)
+      }
+    }
+
+    // Aplica o brilho à cor vermelha
+    uint32_t fadedColor = strip.Color(brightness, 0, 0); // Vermelho com brilho variável
+    strip.fill(fadedColor, 0, NUM_LEDS); // Aplica a cor a todos os LEDs
+    strip.show(); // Atualiza a fita de LED
   }
-  strip.show();
 }
 
-void subscription_callback_motor3(const void * msgin) {
-  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 1) {
-    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo
-  }
-  strip.show();
-}
 
 void subscription_callback_state(const void * msgin) {
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 0) {
-    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo
-  }else if (msg->data == 1){
-    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo piscando
 
-  }else if (msg->data == 2){
-    strip.fill(strip.Color(0, 0, 255), 0, NUM_LEDS); // azul p/ teste, idealmente vermelho fade
-  }else if (msg->data == 3){
-    strip.fill(strip.Color(255, 0, 0), 0, NUM_LEDS); // Vermelho
-  }else if (msg->data == 4){
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // Verde p/ teste
+  switch (msg->data) {
+    case 0: // Amarelo estático
+      strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo
+      break;
+
+    case 1: // Amarelo piscando
+      blinkLEDStrip(strip.Color(255, 255, 0), 500); // Amarelo piscando
+      break;
+
+    case 2: // Vermelho fade in and out
+      fadeRedEffect(); // Vermelho fade in/out
+      break;
+
+    case 3: // Vermelho estático
+      strip.fill(strip.Color(255, 0, 0), 0, NUM_LEDS); // Vermelho
+      break;
+
+    case 4: // Verde estático (para teste)
+      strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // Verde
+      break;
+
+    default:
+      // Caso padrão: desliga os LEDs
+      strip.fill(0, 0, NUM_LEDS); // Desliga todos os LEDs
+      break;
   }
 
-  strip.show();
+  strip.show(); // Atualiza a fita de LED
 }
 
 void subscription_callback_motor_position(const void * msgin) {
@@ -142,6 +184,7 @@ void subscription_callback_motor_position(const void * msgin) {
   }
 
 }
+
 
 void setup() {
   Serial.begin(115200);
@@ -181,22 +224,17 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node, "hardware_controller", "", &support));
 
   // Cria os subscribers
-
-  RCCHECK(rclc_subscription_init_default(&subscriber2, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorA"));
-  RCCHECK(rclc_subscription_init_default(&subscriber3, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorB"));
   RCCHECK(rclc_subscription_init_default(&subscriber_state, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "beta_state"));
   RCCHECK(rclc_subscription_init_default(&subscriber_motor_position, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motor_position"));
 
   // Cria o executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 5, &allocator));
-
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber2, &msg2, &subscription_callback_motor2, ON_NEW_DATA));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber3, &msg3, &subscription_callback_motor3, ON_NEW_DATA));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_state, &msg_state, &subscription_callback_state, ON_NEW_DATA));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_motor_position, &msg_motor_position, &subscription_callback_motor_position, ON_NEW_DATA));
 }
 
 void loop() {
+  unsigned long currentMillis = millis();  // Obtém o tempo atual
   // Verifica se o sistema está estável há mais de 10 segundos
   if (millis() - last_error_time > error_reset_time) {
     error_count = 0; // Resetar contador de erros

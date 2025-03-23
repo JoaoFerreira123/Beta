@@ -94,9 +94,19 @@ void subscription_callback_motor3(const void * msgin) {
 
 void subscription_callback_state(const void * msgin) {
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
-  if (msg->data == 1) {
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // Verde
+  if (msg->data == 0) {
+    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo
+  }else if (msg->data == 1){
+    strip.fill(strip.Color(255, 255, 0), 0, NUM_LEDS); // Amarelo piscando
+
+  }else if (msg->data == 2){
+    strip.fill(strip.Color(0, 0, 255), 0, NUM_LEDS); // azul p/ teste, idealmente vermelho fade
+  }else if (msg->data == 3){
+    strip.fill(strip.Color(255, 0, 0), 0, NUM_LEDS); // Vermelho
+  }else if (msg->data == 4){
+    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); // Verde p/ teste
   }
+
   strip.show();
 }
 
@@ -109,38 +119,28 @@ void subscription_callback_motor_position(const void * msgin) {
   if (id_motor == 1){
     int pos_bracoR = (msg->data % 1000); //resto da divisao
     baseGir.write(pos_bracoR);
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
   }
 
   if (id_motor == 2){
     int pos_bracoA = (msg->data % 1000); //resto da divisao
     bracoA.write(pos_bracoA);
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
   }
 
   if (id_motor == 3){
     int pos_bracoB = (msg->data % 1000); //resto da divisao
     bracoB.write(pos_bracoB);
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
   }
 
   if (id_motor == 4){
     int pos_bracoC = (msg->data % 1000); //resto da divisao
     bracoC.write(pos_bracoC);
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
   }
 
   if (id_motor == 5){
     int pos_bracoD = (msg->data % 1000); //resto da divisao
     bracoD.write(pos_bracoD);
-
-    strip.fill(strip.Color(0, 255, 0), 0, NUM_LEDS); 
   }
 
-
-
-
-  strip.show();
 }
 
 void setup() {
@@ -184,7 +184,7 @@ void setup() {
 
   RCCHECK(rclc_subscription_init_default(&subscriber2, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorA"));
   RCCHECK(rclc_subscription_init_default(&subscriber3, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motorB"));
-  RCCHECK(rclc_subscription_init_default(&subscriber_state, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "state"));
+  RCCHECK(rclc_subscription_init_default(&subscriber_state, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "beta_state"));
   RCCHECK(rclc_subscription_init_default(&subscriber_motor_position, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "motor_position"));
 
   // Cria o executor

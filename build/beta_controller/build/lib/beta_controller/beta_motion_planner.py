@@ -79,11 +79,14 @@ class beta_motion_planner(Node):
             # Verifica se os valores dos sliders mudaram
             if current_slider_values != self.last_slider_values:
                 print(f"Sliders movidos! Valores atuais: {current_slider_values}")  # Log para depuração
-                self.last_slider_values = current_slider_values  # Atualiza os últimos valores ANTES de mudar o estado
+                self.last_slider_values = current_slider_values  # Atualiza os últimos valores
                 self.state = "E3"
                 self.E3()
                 self.inactivity_timer = time.time()  # Reinicia o temporizador de inatividade
                 print("Transição para E3: Controle manual com easing")  # Log para depuração
+
+                # Define a flag para indicar que os sliders foram movidos
+                self.slider_changed = True
 
             elif 'reproduzir_pos' in gui_commands and gui_commands['reproduzir_pos'] == True:
                 self.state = "E4"
@@ -119,6 +122,9 @@ class beta_motion_planner(Node):
                 self.last_slider_values = current_slider_values
                 self.inactivity_timer = time.time()  # Reinicia o temporizador de inatividade
                 print("Sliders em movimento...")
+
+                # Define a flag para indicar que os sliders foram movidos
+                self.slider_changed = True
             elif time.time() - self.inactivity_timer >= 1:
                 self.state = "E2"
                 self.E2()
@@ -140,6 +146,7 @@ class beta_motion_planner(Node):
                         self.E2()
                         self.reproducao_index = 0
                         print("Reprodução concluída. Voltando para E2.")
+
                         
     def E0(self):
         self.command_string += "E0"
@@ -195,13 +202,15 @@ class beta_motion_planner(Node):
                 if motor_id is not None:
                     motor_message = self.format_motor_message(motor_id, angle)
                     self.publish_motor_position(motor_message)
-            self.slider_changed = False  # Reseta a flag após publicar
+            
+            # Reseta a flag após publicar
+            self.slider_changed = False
 
     def publish_motor_position(self, motor_message):
         msg = Int32()
         msg.data = motor_message
         self.motor_position_publisher.publish(msg)
-        #print(f"Publicado no /motor_position: {msg.data}")
+        print(f"Publicado no /motor_position: {msg.data}")  # Log para depuração
 
     def format_motor_message(self, motor_id, angle):
         """
